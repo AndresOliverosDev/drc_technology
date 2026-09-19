@@ -3,14 +3,29 @@
 
 <div
   id="app-preloader"
-  class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#030712] transition-all duration-700 select-none overflow-hidden"
+  class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black transition-all duration-1000 ease-out select-none overflow-hidden"
 >
-  <!-- Ambient background glow -->
-  <div class="absolute w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+  <!-- Background Image matching the Hero view -->
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <img
+      src="/images/hero-bg.jpg"
+      alt=""
+      class="w-full h-full object-cover object-center transform scale-105 filter blur-[2px] opacity-40"
+    />
+  </div>
 
+  <!-- Heavy Dark Glass Overlays: Very dark with a faint, subtle glimmer of the architectural lines -->
+  <div class="absolute inset-0 z-1 bg-black/88 backdrop-blur-[3px] pointer-events-none"></div>
+  <div class="absolute inset-0 z-1 bg-gradient-to-t from-black via-transparent to-black/90 pointer-events-none"></div>
+
+  <!-- Subtle ambient cyan & gold glow behind the logo -->
+  <div class="absolute w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-3xl pointer-events-none z-2"></div>
+  <div class="absolute w-[350px] h-[350px] bg-amber-500/5 rounded-full blur-3xl pointer-events-none z-2"></div>
+
+  <!-- Preloader Content -->
   <div class="relative flex flex-col items-center justify-center space-y-8 z-10 px-4">
     <!-- Logo with subtle breathing pulse -->
-    <div class="relative w-48 sm:w-64 aspect-square flex items-center justify-center">
+    <div class="relative w-48 sm:w-60 aspect-square flex items-center justify-center">
       <img
         src="/images/logo.png"
         alt="DRC Technology"
@@ -20,8 +35,8 @@
 
     <!-- Visual loading effect -->
     <div class="w-48 sm:w-60 flex flex-col items-center space-y-2.5">
-      <div class="w-full h-1 bg-slate-900 rounded-full overflow-hidden border border-slate-800/80">
-        <div class="h-full bg-gradient-to-r from-cyan-500 via-sky-400 to-amber-400 rounded-full animate-progress shadow-[0_0_12px_rgba(6,182,212,0.8)]"></div>
+      <div class="w-full h-1 bg-slate-900/90 rounded-full overflow-hidden border border-slate-800/80">
+        <div class="h-full bg-gradient-to-r from-cyan-500 via-sky-400 to-amber-400 rounded-full animate-progress shadow-[0_0_15px_rgba(6,182,212,0.85)]"></div>
       </div>
       <div class="flex items-center justify-between w-full text-[10px] font-mono tracking-widest text-slate-400 uppercase">
         <span class="flex items-center gap-1.5">
@@ -35,25 +50,22 @@
 </div>
 
 <script>
-  // Hide preloader smoothly after 3.6 seconds (between 3 and 5s as requested)
+  // Hide preloader smoothly after 3.5 seconds (transition duration 1s)
   const preloader = document.getElementById('app-preloader');
   if (preloader) {
+    const dismiss = () => {
+      preloader.classList.add('opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 1000);
+    };
+
     window.addEventListener('load', () => {
-      setTimeout(() => {
-        preloader.classList.add('opacity-0', 'pointer-events-none');
-        setTimeout(() => {
-          preloader.style.display = 'none';
-        }, 700);
-      }, 3400);
+      setTimeout(dismiss, 3400);
     });
-    // Fallback if load already fired
+
     if (document.readyState === 'complete') {
-      setTimeout(() => {
-        preloader.classList.add('opacity-0', 'pointer-events-none');
-        setTimeout(() => {
-          preloader.style.display = 'none';
-        }, 700);
-      }, 3400);
+      setTimeout(dismiss, 3400);
     }
   }
 </script>
