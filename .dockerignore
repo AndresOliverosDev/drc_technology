@@ -1,0 +1,14 @@
+node_modules
+dist
+.astro
+.git
+.gitignore
+.vscode
+CLAUDE.md
+README.md
+Dockerfile
+docker-compose.yml
+.dockerignore
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
