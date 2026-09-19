@@ -1,0 +1,71 @@
+---
+const solutions = [
+  {
+    title: 'Dark Fiber & Metro Rings',
+    description: 'Dedicated, unlit subterranean optical fiber providing unconstrained bandwidth, maximum physical isolation, and sub-millisecond metro latency.',
+    tag: 'SEC-09 PHYSICAL LAYER',
+    icon: 'fiber'
+  },
+  {
+    title: 'Dense Wavelength Division (DWDM)',
+    description: 'Next-gen optical transport scaling up to 800Gbps per channel with coherent transponders, multi-terabit capacity, and deterministic routes.',
+    tag: 'OPTICAL CARRIER',
+    icon: 'optical'
+  },
+  {
+    title: 'Tier-Certified Critical Data Facilities',
+    description: 'N+2 redundant power distribution, chilled-water HVAC isolation, biometric access controls, and direct interconnects with global Tier-1 backbones.',
+    tag: 'MODULAR DATACENTER',
+    icon: 'facility'
+  },
+  {
+    title: 'Mission-Critical Private 5G / Wireless',
+    description: 'Dedicated spectrum networks engineered for industrial robotics, automated ports, high-density telemetry, and real-time perimeter defense.',
+    tag: 'CRITICAL WIRELESS',
+    icon: 'wireless'
+  }
+];
+---
+
+<section id="solutions" class="py-24 relative bg-slate-950/60 border-t border-slate-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+      <h2 class="text-xs font-mono uppercase tracking-widest text-cyan-400">Core Capabilities</h2>
+      <p class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+        Carrier Infrastructure Engineered for Zero Margin of Error
+      </p>
+      <p class="text-slate-400 text-base">
+        Every layer conforms to SEC-09 industrial hardening standards, delivering sovereign control over critical data transit.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {solutions.map((item) => (
+        <div class="glass-panel glass-panel-hover rounded-2xl p-8 relative overflow-hidden group">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/10 transition-colors"></div>
+          
+          <div class="flex items-center justify-between mb-6">
+            <span class="text-xs font-mono tracking-wider px-3 py-1 rounded-full bg-cyan-950/70 border border-cyan-800/40 text-cyan-300">
+              {item.tag}
+            </span>
+            <span class="text-slate-500 group-hover:text-amber-400 transition-colors">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </span>
+          </div>
+
+          <h3 class="text-2xl font-bold text-white font-heading mb-3 group-hover:text-cyan-300 transition-colors">
+            {item.title}
+          </h3>
+
+          <p class="text-slate-400 text-sm leading-relaxed">
+            {item.description}
+          </p>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

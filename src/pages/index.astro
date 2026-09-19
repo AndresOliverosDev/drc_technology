@@ -1,9 +1,19 @@
 ---
 import BaseLayout from '../ui/layouts/BaseLayout.astro';
+import Navbar from '../ui/components/organisms/Navbar.astro';
+import Hero from '../ui/components/organisms/Hero.astro';
+import SolutionsGrid from '../ui/components/organisms/SolutionsGrid.astro';
+import Footer from '../ui/components/organisms/Footer.astro';
 ---
 
-<BaseLayout title="DRC">
-  <main class="min-h-screen flex items-center justify-center bg-slate-950 text-white">
-    <h1 class="text-7xl font-black tracking-widest text-cyan-400">DRC</h1>
+<BaseLayout 
+  title="DRC Technology | Critical Infrastructure & Optical Transport"
+  description="Carrier-grade dark fiber, DWDM optical transport, Tier-certified data centers, and private 5G wireless engineering for mission-critical enterprise digital infrastructure."
+>
+  <Navbar />
+  <main>
+    <Hero />
+    <SolutionsGrid />
   </main>
+  <Footer />
 </BaseLayout>
