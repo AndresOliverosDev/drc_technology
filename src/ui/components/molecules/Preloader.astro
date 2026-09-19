@@ -1,0 +1,51 @@
+---
+---
+
+<div
+  id="app-preloader"
+  class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black transition-all duration-1000 ease-out select-none overflow-hidden"
+>
+  <!-- Architectural Background Image matching the Hero view -->
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <img
+      src="/images/hero-bg.jpg"
+      alt=""
+      class="w-full h-full object-cover object-center transform scale-105 filter blur-[2px] opacity-35"
+    />
+  </div>
+
+  <!-- Deep Dark Glass Overlay: Subtle architectural glimmer peeking through -->
+  <div class="absolute inset-0 z-1 bg-black/90 backdrop-blur-[3px] pointer-events-none"></div>
+
+  <!-- Centered Small Minimalist Logo with slow subtle transition -->
+  <div class="relative z-10 flex items-center justify-center">
+    <div class="w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center animate-logo-pulse">
+      <img
+        src="/images/logo.png"
+        alt="DRC"
+        class="w-full h-full object-contain"
+      />
+    </div>
+  </div>
+</div>
+
+<script>
+  // Hide preloader smoothly after 3.2 seconds
+  const preloader = document.getElementById('app-preloader');
+  if (preloader) {
+    const dismiss = () => {
+      preloader.classList.add('opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 1000);
+    };
+
+    window.addEventListener('load', () => {
+      setTimeout(dismiss, 3200);
+    });
+
+    if (document.readyState === 'complete') {
+      setTimeout(dismiss, 3200);
+    }
+  }
+</script>

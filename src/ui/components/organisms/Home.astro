@@ -1,0 +1,143 @@
+---
+const whatsappUrl = 'https://wa.me/573502049578?text=Hola%20DRC%20Technology,%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20infraestructura.';
+---
+
+<section 
+  id="hero-cinematic"
+  class="relative w-full h-screen min-h-[640px] overflow-hidden bg-black text-white flex flex-col justify-between select-none"
+  style="--mouse-x: 50%; --mouse-y: 50%;"
+>
+  <!-- Background Image: Cinematic, visible, architectural -->
+  <div class="absolute inset-0 z-0">
+    <img
+      src="/images/hero-bg.jpg"
+      alt="Infraestructura DRC Technology"
+      class="w-full h-full object-cover object-center transform scale-[1.02] transition-transform duration-1000 ease-out"
+    />
+  </div>
+
+  <!-- Dark Glass Overlay: Soft blur, atmospheric vignette, pure dark tone -->
+  <div class="absolute inset-0 z-10 bg-gradient-to-r from-black/90 via-black/60 to-black/45 backdrop-blur-[1.5px] pointer-events-none"></div>
+  <div class="absolute inset-0 z-10 bg-gradient-to-t from-black/95 via-transparent to-black/50 pointer-events-none"></div>
+
+  <!-- Dynamic Flashlight / Spotlight Layer (Clean diffused white light, no colors) -->
+  <div 
+    id="flashlight-beam"
+    class="absolute inset-0 z-20 pointer-events-none"
+    style="
+      background: radial-gradient(
+        540px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.18) 0%,
+        rgba(255, 255, 255, 0.05) 45%,
+        transparent 75%
+      );
+      mix-blend-mode: screen;
+    "
+  ></div>
+
+  <!-- Top Minimalist Header (ZHA Style, 100% Spanish, Monochrome) -->
+  <header class="relative z-30 w-full pt-8 px-6 sm:px-12 lg:px-16 flex items-center justify-between">
+    <!-- Brand Logo -->
+    <a href="/" class="flex items-center gap-3 group">
+      <div class="w-9 h-9 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+        <img
+          src="/images/logo.png"
+          alt="DRC"
+          class="w-full h-full object-contain"
+        />
+      </div>
+      <span class="text-xl font-semibold tracking-[0.25em] font-heading text-white uppercase group-hover:text-slate-200 transition-colors">
+        DRC
+      </span>
+    </a>
+
+    <!-- Navigation Menu (Spanish, Clean Uppercase) -->
+    <nav class="hidden md:flex items-center gap-8 text-[11px] font-mono tracking-[0.2em] uppercase text-white/70">
+      <a href="#servicios" class="hover:text-white transition-colors duration-200">Servicios</a>
+      <a href="#infraestructura" class="hover:text-white transition-colors duration-200">Infraestructura</a>
+      <a href="#nosotros" class="hover:text-white transition-colors duration-200">Nosotros</a>
+    </nav>
+
+    <!-- Header Action -->
+    <div class="flex items-center">
+      <a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-[11px] font-mono tracking-[0.2em] uppercase text-white hover:text-black px-4 py-2 rounded border border-white/30 hover:bg-white transition-all duration-300"
+      >
+        Contacto
+      </a>
+    </div>
+  </header>
+
+  <!-- Bottom Hero Statement (Massive White Editorial Typography) -->
+  <div class="relative z-30 w-full pb-12 sm:pb-16 lg:pb-20 px-6 sm:px-12 lg:px-16">
+    <div class="max-w-4xl space-y-5">
+      
+      <!-- Subtitle Badge -->
+      <div class="flex items-center gap-3 text-xs font-mono tracking-[0.25em] text-white/60 uppercase">
+        <span class="w-1.5 h-1.5 rounded-full bg-white/80"></span>
+        <span>DRC &bull; Servicios de Infraestructura</span>
+      </div>
+
+      <!-- Giant Statement Title (Pure White, Elegant, Monumental) -->
+      <h1 class="text-5xl sm:text-7xl lg:text-8xl xl:text-9xl font-light tracking-tight text-white leading-[0.95] font-heading">
+        Servicios de <br />
+        <span class="font-normal text-slate-100">Infraestructura</span>
+      </h1>
+
+      <!-- Brief Company Description (Spanish) -->
+      <p class="text-sm sm:text-base text-white/75 max-w-xl font-light leading-relaxed pt-2">
+        Empresa colombiana especializada en la provisión de soluciones y servicios integrales de infraestructura tecnológica.
+      </p>
+
+      <!-- Contact Button -->
+      <div class="pt-3">
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center px-7 py-3 text-xs font-mono tracking-[0.2em] uppercase text-black bg-white hover:bg-slate-200 rounded transition-all duration-300 shadow-lg shadow-white/5 hover:-translate-y-0.5"
+        >
+          Contactar
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom Right Identifier -->
+  <div class="absolute bottom-8 right-8 z-30 hidden sm:flex items-center gap-3 text-[10px] font-mono tracking-widest text-white/40 uppercase">
+    <span>COLOMBIA</span>
+    <span class="w-1 h-1 rounded-full bg-white/30"></span>
+    <span>DRC TECNOLOGÍA</span>
+  </div>
+</section>
+
+<script>
+  // Mousemove flashlight beam handler
+  const heroSection = document.getElementById('hero-cinematic');
+  if (heroSection) {
+    heroSection.addEventListener('pointermove', (e) => {
+      const rect = heroSection.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+      heroSection.style.setProperty('--mouse-x', `${x}%`);
+      heroSection.style.setProperty('--mouse-y', `${y}%`);
+    });
+
+    heroSection.addEventListener('touchmove', (e) => {
+      if (e.touches.length > 0) {
+        const touch = e.touches[0];
+        const rect = heroSection.getBoundingClientRect();
+        const x = ((touch.clientX - rect.left) / rect.width) * 100;
+        const y = ((touch.clientY - rect.top) / rect.height) * 100;
+
+        heroSection.style.setProperty('--mouse-x', `${x}%`);
+        heroSection.style.setProperty('--mouse-y', `${y}%`);
+      }
+    }, { passive: true });
+  }
+</script>

@@ -2,56 +2,14 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="border-t border-slate-800 bg-slate-950/80 mt-auto">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-      
-      <!-- Brand & Info -->
-      <div class="md:col-span-2 space-y-4">
-        <div class="flex items-center gap-3">
-          <img src="/images/logo.png" alt="DRC Technology" class="w-10 h-10 rounded-lg object-cover" />
-          <span class="text-xl font-extrabold tracking-wider font-heading text-white">
-            DRC <span class="text-cyan-400">TECHNOLOGY</span>
-          </span>
-        </div>
-        <p class="text-sm text-slate-400 max-w-sm">
-          Carrier-grade optical transport, Tier-certified datacenter engineering, and mission-critical telecommunications infrastructure.
-        </p>
-        <p class="text-xs text-slate-500 font-mono">
-          SEC-09 Industrial Compliant Node &bull; LatAm & International Backbone
-        </p>
-      </div>
-
-      <!-- Quick Links -->
-      <div>
-        <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-200 font-mono mb-3">Infrastructure</h3>
-        <ul class="space-y-2 text-sm text-slate-400">
-          <li><a href="#network" class="hover:text-cyan-400 transition-colors">DWDM Optical Backbone</a></li>
-          <li><a href="#network" class="hover:text-cyan-400 transition-colors">Dark Fiber Metro Rings</a></li>
-          <li><a href="#infrastructure" class="hover:text-cyan-400 transition-colors">Tier-Certified Facilities</a></li>
-          <li><a href="#security" class="hover:text-cyan-400 transition-colors">Private 5G Spectrum</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact / Compliance -->
-      <div>
-        <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-200 font-mono mb-3">Operations</h3>
-        <ul class="space-y-2 text-sm text-slate-400">
-          <li><a href="#contact" class="hover:text-cyan-400 transition-colors">NOC Operations (24/7)</a></li>
-          <li><a href="#contact" class="hover:text-cyan-400 transition-colors">Architecture Consultation</a></li>
-          <li><a href="#security" class="hover:text-cyan-400 transition-colors">Security Disclosures</a></li>
-          <li><a href="#terms" class="hover:text-cyan-400 transition-colors">Service Level Agreement (SLA)</a></li>
-        </ul>
-      </div>
-
+<footer class="border-t border-slate-900 bg-slate-950 py-8 mt-auto">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+    <div class="flex items-center gap-2">
+      <img src="/images/logo.png" alt="DRC" class="w-6 h-6 object-contain" />
+      <span class="text-slate-400 font-medium">&copy; {currentYear} DRC Technology Solutions. Todos los derechos reservados.</span>
     </div>
-
-    <div class="mt-12 pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
-      <p>&copy; {currentYear} DRC Technology Solutions. All rights reserved.</p>
-      <div class="flex items-center gap-6 mt-4 sm:mt-0">
-        <span class="text-slate-400 hover:text-cyan-400 transition-colors">Carrier Status: Normal</span>
-        <span class="text-slate-400 hover:text-cyan-400 transition-colors">NOC Latency: 1.2ms</span>
-      </div>
+    <div class="font-mono text-slate-500">
+      Telecomunicaciones &bull; Infraestructura Crítica
     </div>
   </div>
 </footer>

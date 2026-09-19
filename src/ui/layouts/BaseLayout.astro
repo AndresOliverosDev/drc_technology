@@ -8,16 +8,16 @@ interface Props {
 }
 
 const {
-  title = 'DRC Technology | Next-Generation Telecom & Critical Infrastructure',
-  description = 'Carrier-grade dark fiber, DWDM optical transport, Tier-certified data centers, and private 5G wireless engineering for mission-critical enterprise digital infrastructure.',
-  ogImage = '/og-image.png'
+  title = 'DRC | Servicios de Infraestructura',
+  description = 'Empresa colombiana especializada en la provisión de soluciones y servicios integrales de infraestructura tecnológica.',
+  ogImage = '/images/logo.png'
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://drctechnology.com');
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -64,17 +64,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://drctechn
         "legalName": "DRC Technology Solutions S.A.S.",
         "url": "https://drctechnology.com",
         "logo": "https://drctechnology.com/images/logo.png",
-        "description": "Provider of carrier-grade telecommunications and critical digital infrastructure.",
+        "description": "Proveedor de soluciones y servicios integrales de infraestructura tecnológica.",
         "contactPoint": {
           "@type": "ContactPoint",
-          "telephone": "+1-800-555-0372",
-          "contactType": "customer service",
-          "availableLanguage": ["English", "Spanish"]
+          "contactType": "servicio al cliente",
+          "availableLanguage": ["Spanish", "English"]
         }
       }
     </script>
   </head>
-  <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col antialiased selection:bg-cyan-500 selection:text-white">
+  <body class="bg-black text-white min-h-screen flex flex-col antialiased selection:bg-white selection:text-black">
     <slot />
   </body>
 </html>
