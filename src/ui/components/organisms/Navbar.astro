@@ -1,0 +1,106 @@
+---
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '/' } = Astro.props;
+
+const navItems = [
+  { label: 'Solutions', href: '#solutions' },
+  { label: 'Infrastructure', href: '#infrastructure' },
+  { label: 'Network & Fiber', href: '#network' },
+  { label: 'Security (SEC-09)', href: '#security' },
+  { label: 'Contact', href: '#contact' },
+];
+---
+
+<header class="sticky top-0 z-50 w-full glass-panel border-b border-slate-800/80">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo & Brand -->
+      <a href="/" class="flex items-center gap-3 group">
+        <div class="relative w-10 h-10 rounded-xl overflow-hidden border border-cyan-500/30 bg-slate-900/80 p-0.5 transition-transform duration-300 group-hover:scale-105 group-hover:border-cyan-400/60 shadow-md shadow-cyan-950/50">
+          <img 
+            src="/images/logo.png" 
+            alt="DRC Technology" 
+            class="w-full h-full object-contain rounded-lg" 
+            loading="eager"
+          />
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xl font-extrabold tracking-wider font-heading text-white flex items-center gap-1.5">
+            DRC <span class="text-cyan-400 text-xs font-semibold tracking-wider px-2 py-0.5 rounded-md bg-cyan-950/70 border border-cyan-800/50">TECHNOLOGY</span>
+          </span>
+          <span class="text-[10px] tracking-widest text-slate-400 font-mono uppercase">Critical Infrastructure</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class="text-sm font-medium text-slate-300 hover:text-cyan-400 transition-colors duration-200 tracking-wide"
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+
+      <!-- CTA Action -->
+      <div class="hidden sm:flex items-center gap-4">
+        <a
+          href="#contact"
+          class="relative inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold tracking-wide text-white transition-all duration-300 rounded-lg overflow-hidden group bg-gradient-to-r from-cyan-600 to-cyan-500 hover:from-cyan-500 hover:to-cyan-400 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 hover:-translate-y-0.5"
+        >
+          <span class="relative flex items-center gap-2">
+            <span>Client Portal</span>
+            <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="flex md:hidden">
+        <button
+          type="button"
+          id="mobile-menu-btn"
+          class="inline-flex items-center justify-center p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/80 focus:outline-none"
+          aria-label="Toggle Navigation Menu"
+        >
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800/90 bg-slate-950/95 px-4 pt-2 pb-6 space-y-3">
+    {navItems.map((item) => (
+      <a
+        href={item.href}
+        class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-cyan-400 hover:bg-slate-900"
+      >
+        {item.label}
+      </a>
+    ))}
+    <a
+      href="#contact"
+      class="block w-full text-center px-4 py-2.5 rounded-lg text-sm font-semibold bg-cyan-600 text-white hover:bg-cyan-500"
+    >
+      Client Portal
+    </a>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>
