@@ -39,14 +39,8 @@
   transform: translateY(-2px);
 }
 
-.glow-cyan {
-  text-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
-}
-
-.mesh-gradient {
-  background: radial-gradient(circle at 50% 0%, rgba(2, 132, 199, 0.18) 0%, transparent 60%),
-              radial-gradient(circle at 85% 30%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
-              radial-gradient(circle at 15% 70%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
+.glow-white {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 .grid-pattern {
@@ -57,31 +51,23 @@
 
 @keyframes logoPulse {
   0% {
-    transform: scale(0.92);
-    opacity: 0.6;
+    transform: scale(0.95);
+    opacity: 0.7;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.15));
   }
   50% {
-    transform: scale(1.06);
+    transform: scale(1.04);
     opacity: 1;
-    filter: drop-shadow(0 0 45px rgba(6, 182, 212, 0.65));
+    filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.4));
   }
   100% {
-    transform: scale(1);
-    opacity: 1;
-    filter: drop-shadow(0 0 25px rgba(6, 182, 212, 0.4));
+    transform: scale(0.98);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
   }
 }
 
 .animate-logo-pulse {
-  animation: logoPulse 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
-}
-
-@keyframes progressFill {
-  0% { width: 0%; }
-  100% { width: 100%; }
-}
-
-.animate-progress {
-  animation: progressFill 3.4s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  animation: logoPulse 4s ease-in-out infinite;
 }
 

@@ -6,100 +6,107 @@
   class="relative w-full h-screen min-h-[640px] overflow-hidden bg-black text-white flex flex-col justify-between select-none"
   style="--mouse-x: 50%; --mouse-y: 50%;"
 >
-  <!-- Base Background Image (Always visible, dark cinematic tone) -->
+  <!-- Background Image: Cinematic, visible, architectural -->
   <div class="absolute inset-0 z-0">
     <img
       src="/images/hero-bg.jpg"
-      alt="DRC Technology Architecture"
+      alt="Infraestructura DRC Technology"
       class="w-full h-full object-cover object-center transform scale-[1.02] transition-transform duration-1000 ease-out"
     />
   </div>
 
-  <!-- Dark Glass Overlay: Soft blur, moody vignette, ensuring clear visibility while preserving contrast -->
-  <div class="absolute inset-0 z-10 bg-gradient-to-r from-black/90 via-black/55 to-black/40 backdrop-blur-[1.5px] pointer-events-none"></div>
-  <div class="absolute inset-0 z-10 bg-gradient-to-t from-black/95 via-transparent to-black/40 pointer-events-none"></div>
+  <!-- Dark Glass Overlay: Soft blur, atmospheric vignette, pure dark tone -->
+  <div class="absolute inset-0 z-10 bg-gradient-to-r from-black/90 via-black/60 to-black/45 backdrop-blur-[1.5px] pointer-events-none"></div>
+  <div class="absolute inset-0 z-10 bg-gradient-to-t from-black/95 via-transparent to-black/50 pointer-events-none"></div>
 
-  <!-- Dynamic Flashlight / Spotlight Illumination Layer (Tracks cursor smoothly) -->
+  <!-- Dynamic Flashlight / Spotlight Layer (Clean diffused white light, no colors) -->
   <div 
     id="flashlight-beam"
-    class="absolute inset-0 z-20 pointer-events-none transition-opacity duration-300"
+    class="absolute inset-0 z-20 pointer-events-none"
     style="
       background: radial-gradient(
-        520px circle at var(--mouse-x) var(--mouse-y),
-        rgba(255, 255, 255, 0.22) 0%,
-        rgba(6, 182, 212, 0.12) 35%,
-        rgba(245, 158, 11, 0.05) 55%,
+        540px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.18) 0%,
+        rgba(255, 255, 255, 0.05) 45%,
         transparent 75%
       );
       mix-blend-mode: screen;
     "
   ></div>
 
-  <!-- Top Minimalist ZHA-Style Header -->
+  <!-- Top Minimalist Header (ZHA Style, 100% Spanish, Monochrome) -->
   <header class="relative z-30 w-full pt-8 px-6 sm:px-12 lg:px-16 flex items-center justify-between">
     <!-- Brand Logo -->
-    <a href="/" class="flex items-center gap-3.5 group">
-      <div class="w-10 h-10 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+    <a href="/" class="flex items-center gap-3 group">
+      <div class="w-9 h-9 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
         <img
           src="/images/logo.png"
           alt="DRC"
-          class="w-full h-full object-contain filter drop-shadow-[0_0_15px_rgba(6,182,212,0.5)]"
+          class="w-full h-full object-contain"
         />
       </div>
-      <span class="text-2xl font-light tracking-[0.2em] font-heading text-white uppercase group-hover:text-cyan-300 transition-colors">
+      <span class="text-xl font-light tracking-[0.25em] font-heading text-white uppercase group-hover:text-slate-200 transition-colors">
         DRC
       </span>
     </a>
 
-    <!-- Minimalist Navigation Menu -->
+    <!-- Navigation Menu (Spanish, Clean Uppercase) -->
     <nav class="hidden md:flex items-center gap-8 text-[11px] font-mono tracking-[0.2em] uppercase text-white/70">
-      <a href="#solutions" class="hover:text-white transition-colors duration-200">Solutions</a>
-      <a href="#infrastructure" class="hover:text-white transition-colors duration-200">Infrastructure</a>
-      <a href="#network" class="hover:text-white transition-colors duration-200">Network</a>
-      <a href="#about" class="hover:text-white transition-colors duration-200">About DRC</a>
-      <a href="#contact" class="hover:text-cyan-400 transition-colors duration-200">Contact</a>
+      <a href="#servicios" class="hover:text-white transition-colors duration-200">Servicios</a>
+      <a href="#infraestructura" class="hover:text-white transition-colors duration-200">Infraestructura</a>
+      <a href="#nosotros" class="hover:text-white transition-colors duration-200">Nosotros</a>
     </nav>
 
-    <!-- Right Quick Action / Search -->
-    <div class="flex items-center gap-4">
+    <!-- Header Action -->
+    <div class="flex items-center">
       <a
-        href="#contact"
-        class="text-[11px] font-mono tracking-[0.2em] uppercase text-white/80 hover:text-white px-3.5 py-1.5 rounded border border-white/20 hover:border-cyan-400/60 transition-all duration-300"
+        href="#contacto"
+        class="text-[11px] font-mono tracking-[0.2em] uppercase text-white hover:text-black px-4 py-2 rounded border border-white/30 hover:bg-white transition-all duration-300"
       >
-        Access Node
+        Contacto
       </a>
     </div>
   </header>
 
-  <!-- Bottom Hero Statement (Massive ZHA Editorial Typography) -->
+  <!-- Bottom Hero Statement (Massive White Editorial Typography) -->
   <div class="relative z-30 w-full pb-12 sm:pb-16 lg:pb-20 px-6 sm:px-12 lg:px-16">
-    <div class="max-w-6xl space-y-4">
+    <div class="max-w-4xl space-y-5">
       
-      <!-- Sub-label / Classification -->
-      <div class="flex items-center gap-3 text-xs font-mono tracking-[0.25em] text-cyan-400 uppercase">
-        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
-        <span>DRC Technology &bull; Mission-Critical Systems</span>
+      <!-- Subtitle Badge -->
+      <div class="flex items-center gap-3 text-xs font-mono tracking-[0.25em] text-white/60 uppercase">
+        <span class="w-1.5 h-1.5 rounded-full bg-white/80"></span>
+        <span>DRC &bull; Servicios de Infraestructura</span>
       </div>
 
-      <!-- Giant Statement Title -->
+      <!-- Giant Statement Title (Pure White, Elegant, Monumental) -->
       <h1 class="text-5xl sm:text-7xl lg:text-8xl xl:text-9xl font-light tracking-tight text-white leading-[0.95] font-heading">
-        Advancing Critical <br />
-        <span class="font-normal text-slate-100">Infrastructure</span>
+        Servicios de <br />
+        <span class="font-normal text-slate-100">Infraestructura</span>
       </h1>
 
-      <!-- Short Manifesto / Company Description -->
-      <p class="text-sm sm:text-base text-slate-300/80 max-w-xl font-light leading-relaxed pt-2">
-        Carrier-grade dark fiber, high-density optical transport (DWDM), and Tier-certified data ecosystems engineered for enterprise sovereign connectivity.
+      <!-- Brief Company Description (Spanish) -->
+      <p class="text-sm sm:text-base text-white/75 max-w-xl font-light leading-relaxed pt-2">
+        Empresa colombiana especializada en la provisión de soluciones y servicios integrales de infraestructura tecnológica.
       </p>
+
+      <!-- Contact Button -->
+      <div class="pt-3">
+        <a
+          href="#contacto"
+          class="inline-flex items-center justify-center px-7 py-3 text-xs font-mono tracking-[0.2em] uppercase text-black bg-white hover:bg-slate-200 rounded transition-all duration-300 shadow-lg shadow-white/5 hover:-translate-y-0.5"
+        >
+          Contactar
+        </a>
+      </div>
 
     </div>
   </div>
 
-  <!-- Ambient Bottom Right Corner Indicator -->
-  <div class="absolute bottom-8 right-8 z-30 hidden sm:flex items-center gap-3 text-[10px] font-mono tracking-widest text-slate-400/80 uppercase">
-    <span>SYSTEM NODE 01</span>
-    <span class="w-1 h-1 rounded-full bg-slate-600"></span>
-    <span class="text-emerald-400">LATENCY &lt; 1.5ms</span>
+  <!-- Bottom Right Identifier -->
+  <div class="absolute bottom-8 right-8 z-30 hidden sm:flex items-center gap-3 text-[10px] font-mono tracking-widest text-white/40 uppercase">
+    <span>COLOMBIA</span>
+    <span class="w-1 h-1 rounded-full bg-white/30"></span>
+    <span>DRC TECNOLOGÍA</span>
   </div>
 </section>
 
@@ -116,7 +123,6 @@
       heroSection.style.setProperty('--mouse-y', `${y}%`);
     });
 
-    // Touch support for mobile devices
     heroSection.addEventListener('touchmove', (e) => {
       if (e.touches.length > 0) {
         const touch = e.touches[0];
