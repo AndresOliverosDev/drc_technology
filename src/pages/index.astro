@@ -1,19 +1,15 @@
 ---
 import BaseLayout from '../ui/layouts/BaseLayout.astro';
 import Preloader from '../ui/components/molecules/Preloader.astro';
-import Navbar from '../ui/components/organisms/Navbar.astro';
 import Home from '../ui/components/organisms/Home.astro';
-import Footer from '../ui/components/organisms/Footer.astro';
 ---
 
 <BaseLayout 
-  title="DRC Technology | Infraestructura Crítica & Telecomunicaciones"
-  description="Soluciones de conectividad de alta disponibilidad, transporte óptico y servicios de infraestructura tecnológica para entornos empresariales de misión crítica."
+  title="DRC Technology | Advancing Critical Infrastructure"
+  description="Carrier-grade dark fiber, high-density optical transport (DWDM), and Tier-certified data ecosystems engineered for enterprise sovereign connectivity."
 >
   <Preloader />
-  <Navbar />
-  <main>
+  <main class="w-full h-full">
     <Home />
   </main>
-  <Footer />
 </BaseLayout>
