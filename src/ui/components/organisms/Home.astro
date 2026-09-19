@@ -1,4 +1,5 @@
 ---
+const whatsappUrl = 'https://wa.me/573502049578?text=Hola%20DRC%20Technology,%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20infraestructura.';
 ---
 
 <section 
@@ -60,7 +61,9 @@
     <!-- Header Action -->
     <div class="flex items-center">
       <a
-        href="#contacto"
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
         class="text-[11px] font-mono tracking-[0.2em] uppercase text-white hover:text-black px-4 py-2 rounded border border-white/30 hover:bg-white transition-all duration-300"
       >
         Contacto
@@ -92,7 +95,9 @@
       <!-- Contact Button -->
       <div class="pt-3">
         <a
-          href="#contacto"
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
           class="inline-flex items-center justify-center px-7 py-3 text-xs font-mono tracking-[0.2em] uppercase text-black bg-white hover:bg-slate-200 rounded transition-all duration-300 shadow-lg shadow-white/5 hover:-translate-y-0.5"
         >
           Contactar
