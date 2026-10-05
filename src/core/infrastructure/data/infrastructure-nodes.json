@@ -1,0 +1,361 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "bog-hq-01",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.0600, 4.6533]
+      },
+      "properties": {
+        "id": "bog-hq-01",
+        "name": "DR.C Technology — Sede Principal",
+        "city": "Bogotá D.C.",
+        "department": "Cundinamarca",
+        "type": "headquarters",
+        "status": "operational",
+        "isHQ": true,
+        "capacity": "NOC Central & Labs 10 Gbps",
+        "latency": "< 1ms",
+        "tier": "Tier III Enterprise",
+        "address": "Cra. 13 #60-25, Chapinero",
+        "description": "Centro de operaciones técnicas y consultoría de software. Sede corporativa principal.",
+        "uptime": "99.99%",
+        "services": [
+          "Infraestructura Tecnológica",
+          "Redes y Conectividad",
+          "CCTV y Seguridad Electrónica",
+          "Detección de Incendios",
+          "Consultoría de Software"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bog-dc-01",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.1012, 4.6593]
+      },
+      "properties": {
+        "id": "bog-dc-01",
+        "name": "Datacenter Central Bogotá",
+        "city": "Bogotá D.C.",
+        "department": "Cundinamarca",
+        "type": "datacenter",
+        "status": "operational",
+        "isHQ": false,
+        "capacity": "100 Gbps Redundante",
+        "latency": "< 1ms",
+        "tier": "Tier III Certified",
+        "address": "Av. El Dorado #68C-61",
+        "description": "Nodo neurálgico central de cómputo, redundancia eléctrica 2N y conmutación de tráfico nacional.",
+        "uptime": "99.99%",
+        "services": [
+          "Hosting & Colocation",
+          "Conectividad Troncal",
+          "Redundancia Eléctrica 2N"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bog-pop-02",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.0538, 4.6865]
+      },
+      "properties": {
+        "id": "bog-pop-02",
+        "name": "POP Metropolitano Bogotá Norte",
+        "city": "Bogotá D.C.",
+        "department": "Cundinamarca",
+        "type": "pop",
+        "status": "operational",
+        "isHQ": false,
+        "capacity": "40 Gbps",
+        "latency": "< 2ms",
+        "tier": "Tier II",
+        "address": "Calle 100 #19A-40",
+        "description": "Punto de presencia para distribución de fibra óptica empresarial y servicios gestionados.",
+        "uptime": "99.98%",
+        "services": [
+          "Distribución Metropolitana",
+          "Acceso Empresarial Dedicado"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "med-dc-01",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.5742, 6.2088]
+      },
+      "properties": {
+        "id": "med-dc-01",
+        "name": "Datacenter Aburrá Medellín",
+        "city": "Medellín",
+        "department": "Antioquia",
+        "type": "datacenter",
+        "status": "operational",
+        "isHQ": false,
+        "capacity": "80 Gbps Redundante",
+        "latency": "< 3ms",
+        "tier": "Tier III",
+        "address": "Cra. 43A #1-50, El Poblado",
+        "description": "Centro de datos principal para la región noroccidental con redundancia climática y energética.",
+        "uptime": "99.99%",
+        "services": [
+          "Colocation Regional",
+          "Conectividad DWDM",
+          "Disaster Recovery"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "med-pop-02",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.5668, 6.2655]
+      },
+      "properties": {
+        "id": "med-pop-02",
+        "name": "POP Medellín Innovación",
+        "city": "Medellín",
+        "department": "Antioquia",
+        "type": "pop",
+        "status": "operational",
+        "isHQ": false,
+        "capacity": "40 Gbps",
+        "latency": "< 4ms",
+        "tier": "Tier II",
+        "address": "Calle 67 #52-20, Complejo Ruta N",
+        "description": "Nodo de conectividad de ultra alta velocidad e interconexión con redes académicas y de innovación.",
+        "uptime": "99.98%",
+        "services": [
+          "Enlace Corporativo",
+          "Interconexión IXP"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cal-hub-01",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.5298, 3.4682]
+      },
+      "properties": {
+        "id": "cal-hub-01",
+        "name": "Fiber Hub Pacífico Cali",
+        "city": "Cali",
+        "department": "Valle del Cauca",
+        "type": "fiber_hub",
+        "status": "operational",
+        "isHQ": false,
+        "capacity": "60 Gbps Anillo DWDM",
+        "latency": "< 6ms",
+        "tier": "Tier III",
+        "address": "Av. 6N #28N-35",
+        "description": "Distribuidor troncal de fibra óptica de alta capacidad para el suroccidente colombiano.",
+        "uptime": "99.98%",
+        "services": [
+          "Enrutamiento Troncal",
+          "Anillos DWDM Redundantes"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cal-pop-02",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.5120, 3.5204]
+      },
+      "properties": {
+        "id": "cal-pop-02",
+        "name": "POP Industrial Yumbo",
+        "city": "Cali",
+        "department": "Valle del Cauca",
+        "type": "pop",
+        "status": "operational",
+        "isHQ": false,
+        "capacity": "30 Gbps",
+        "latency": "< 7ms",
+        "tier": "Tier II",
+        "address": "Zona Industrial Menga",
+        "description": "Conexión directa dedicada a corredores industriales y logísticos del Valle del Cauca.",
+        "uptime": "99.97%",
+        "services": [
+          "Fibra Empresarial",
+          "Enlaces Dedicados"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "baq-hub-01",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.7932, 10.9984]
+      },
+      "properties": {
+        "id": "baq-hub-01",
+        "name": "Fiber Hub Gateway Barranquilla",
+        "city": "Barranquilla",
+        "department": "Atlántico",
+        "type": "fiber_hub",
+        "status": "operational",
+        "isHQ": false,
+        "capacity": "120 Gbps Enlace Submarino",
+        "latency": "< 11ms",
+        "tier": "Tier IV Ready",
+        "address": "Vía 40 #77B-55",
+        "description": "Estación de aterrizaje e interconexión submarina con cables internacionales del Caribe.",
+        "uptime": "99.99%",
+        "services": [
+          "Salida Internacional Submarina",
+          "Interconexión Carrier-to-Carrier"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "baq-pop-02",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.8143, 11.0076]
+      },
+      "properties": {
+        "id": "baq-pop-02",
+        "name": "POP Metropolitano Barranquilla",
+        "city": "Barranquilla",
+        "department": "Atlántico",
+        "type": "pop",
+        "status": "operational",
+        "isHQ": false,
+        "capacity": "40 Gbps",
+        "latency": "< 12ms",
+        "tier": "Tier II",
+        "address": "Cra. 53 #82-86",
+        "description": "Distribución metropolitana de fibra óptica y servicios para sector financiero y portuario.",
+        "uptime": "99.98%",
+        "services": [
+          "Conectividad Portuaria",
+          "Fibra Corporativa"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ctg-twr-01",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.5118, 10.3342]
+      },
+      "properties": {
+        "id": "ctg-twr-01",
+        "name": "Torre Enlace Bahía Cartagena",
+        "city": "Cartagena",
+        "department": "Bolívar",
+        "type": "tower",
+        "status": "operational",
+        "isHQ": false,
+        "capacity": "20 Gbps Microondas Licenciado",
+        "latency": "< 13ms",
+        "tier": "Carrier Grade",
+        "address": "Zona Industrial Mamonal Km 7",
+        "description": "Retransmisión inalámbrica de alta disponibilidad para terminales marítimas y complejos petroquímicos.",
+        "uptime": "99.96%",
+        "services": [
+          "Microondas Carrier-Grade",
+          "Redundancia Inalámbrica Crítica"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "ctg-hub-02",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.5562, 10.4042]
+      },
+      "properties": {
+        "id": "ctg-hub-02",
+        "name": "Fiber Hub Bocagrande",
+        "city": "Cartagena",
+        "department": "Bolívar",
+        "type": "fiber_hub",
+        "status": "maintenance",
+        "isHQ": false,
+        "capacity": "40 Gbps",
+        "latency": "< 12ms",
+        "tier": "Tier II",
+        "address": "Av. San Martín #7-40",
+        "description": "Nodo de agregación metropolitana. En proceso de mantenimiento preventivo de rutas DWDM.",
+        "uptime": "99.90%",
+        "services": [
+          "Agregación Turística / Hotelera",
+          "Mantenimiento Programado"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bga-pop-01",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-73.1118, 7.1186]
+      },
+      "properties": {
+        "id": "bga-pop-01",
+        "name": "POP Santander Bucaramanga",
+        "city": "Bucaramanga",
+        "department": "Santander",
+        "type": "pop",
+        "status": "operational",
+        "isHQ": false,
+        "capacity": "40 Gbps",
+        "latency": "< 8ms",
+        "tier": "Tier II",
+        "address": "Cra. 27 #36-20, Cabecera",
+        "description": "Punto de presencia neurálgico para el nororiente colombiano y conexión con la troncal central.",
+        "uptime": "99.98%",
+        "services": [
+          "Troncal Nororiente",
+          "Fibra Empresarial"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pei-twr-01",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.6912, 4.8087]
+      },
+      "properties": {
+        "id": "pei-twr-01",
+        "name": "Torre Eje Cafetero Pereira",
+        "city": "Pereira",
+        "department": "Risaralda",
+        "type": "tower",
+        "status": "operational",
+        "isHQ": false,
+        "capacity": "25 Gbps Anillo Híbrido",
+        "latency": "< 5ms",
+        "tier": "Carrier Grade",
+        "address": "Av. Circunvalar #12-30",
+        "description": "Nodo estratégico de interconexión inalámbrica y fibra para el triángulo del café.",
+        "uptime": "99.97%",
+        "services": [
+          "Interconexión Triángulo del Café",
+          "Torre de Transmisión Microondas"
+        ]
+      }
+    }
+  ]
+}

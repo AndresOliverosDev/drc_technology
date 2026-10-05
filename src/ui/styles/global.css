@@ -12,6 +12,17 @@
     background-color: #030712;
     color: #f3f4f6;
     color-scheme: dark;
+    scroll-snap-type: y mandatory;
+  }
+
+  .snap-section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  footer.snap-section {
+    scroll-snap-align: end;
+    scroll-snap-stop: normal;
   }
 
   h1, h2, h3, h4, h5, h6 {

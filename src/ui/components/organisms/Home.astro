@@ -4,7 +4,7 @@ const whatsappUrl = 'https://wa.me/573502049578?text=Hola%20DRC%20Technology,%20
 
 <section 
   id="hero-cinematic"
-  class="relative w-full h-screen min-h-[640px] overflow-hidden bg-black text-white flex flex-col justify-between select-none"
+  class="snap-section relative w-full h-[100dvh] min-h-[600px] overflow-hidden bg-black text-white flex flex-col justify-between select-none"
   style="--mouse-x: 50%; --mouse-y: 50%;"
 >
   <!-- Background Image: Cinematic, visible, architectural -->
@@ -116,10 +116,11 @@ const whatsappUrl = 'https://wa.me/573502049578?text=Hola%20DRC%20Technology,%20
 </section>
 
 <script>
-  // Mousemove flashlight beam handler
+  // Mousemove flashlight beam handler + Mobile Auto-Snap Transition
   const heroSection = document.getElementById('hero-cinematic');
   if (heroSection) {
     heroSection.addEventListener('pointermove', (e) => {
+      if (e.pointerType === 'touch') return;
       const rect = heroSection.getBoundingClientRect();
       const x = ((e.clientX - rect.left) / rect.width) * 100;
       const y = ((e.clientY - rect.top) / rect.height) * 100;
@@ -128,16 +129,66 @@ const whatsappUrl = 'https://wa.me/573502049578?text=Hola%20DRC%20Technology,%20
       heroSection.style.setProperty('--mouse-y', `${y}%`);
     });
 
-    heroSection.addEventListener('touchmove', (e) => {
-      if (e.touches.length > 0) {
-        const touch = e.touches[0];
-        const rect = heroSection.getBoundingClientRect();
-        const x = ((touch.clientX - rect.left) / rect.width) * 100;
-        const y = ((touch.clientY - rect.top) / rect.height) * 100;
+    let touchStartY = 0;
+    let touchStartX = 0;
+    let isAutoSnapping = false;
 
-        heroSection.style.setProperty('--mouse-x', `${x}%`);
-        heroSection.style.setProperty('--mouse-y', `${y}%`);
+    heroSection.addEventListener('touchstart', (e) => {
+      if (e.touches.length === 1) {
+        touchStartY = e.touches[0].clientY;
+        touchStartX = e.touches[0].clientX;
       }
     }, { passive: true });
+
+    heroSection.addEventListener('touchmove', (e) => {
+      if (e.touches.length > 0) {
+        if (isAutoSnapping) {
+          if (e.cancelable) e.preventDefault();
+          return;
+        }
+
+        const touch = e.touches[0];
+        const deltaY = touchStartY - touch.clientY;
+        const deltaX = Math.abs(touchStartX - touch.clientX);
+
+        // Lock hero: prevent manual 1:1 tactile dragging
+        if (Math.abs(deltaY) > 4) {
+          if (e.cancelable) e.preventDefault();
+
+          // Intercept downward scroll intent and trigger automatic snap to map section
+          if (deltaY > 10 && deltaY > deltaX) {
+            isAutoSnapping = true;
+            const target = document.getElementById('cobertura') || document.getElementById('infraestructura');
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
+            setTimeout(() => {
+              isAutoSnapping = false;
+            }, 1200);
+          }
+        }
+      }
+    }, { passive: false });
+
+    // Desktop mouse wheel auto-glide
+    heroSection.addEventListener('wheel', (e) => {
+      if (isAutoSnapping) {
+        e.preventDefault();
+        return;
+      }
+
+      if (e.deltaY > 8 && window.scrollY < 80) {
+        e.preventDefault();
+        isAutoSnapping = true;
+        const target = document.getElementById('cobertura') || document.getElementById('infraestructura');
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        setTimeout(() => {
+          isAutoSnapping = false;
+        }, 1100);
+      }
+    }, { passive: false });
   }
 </script>
