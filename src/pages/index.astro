@@ -1,17 +1,30 @@
 ---
 import BaseLayout from '../ui/layouts/BaseLayout.astro';
-import Home from '../ui/components/organisms/Home.astro';
-import MapSection from '../ui/components/organisms/MapSection.astro';
-import Footer from '../ui/components/organisms/Footer.astro';
 ---
 
 <BaseLayout 
-  title="DRC | Servicios de Infraestructura"
+  title="DRC Technology"
   description="Soluciones y servicios integrales de infraestructura tecnológica."
 >
-  <main class="w-full h-full flex flex-col">
-    <Home />
-    <MapSection />
-    <Footer />
+  <main class="min-h-screen w-full flex items-center justify-center p-6 bg-slate-950 text-slate-100">
+    <section class="max-w-md w-full text-center flex flex-col items-center gap-4">
+      <div class="w-16 h-16 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center p-3 shadow-inner">
+        <img 
+          src="/images/logo.png" 
+          alt="DRC Technology" 
+          class="w-full h-full object-contain"
+        />
+      </div>
+      <div class="space-y-2">
+        <h1 class="text-2xl font-bold tracking-tight text-white">DRC Technology</h1>
+        <p class="text-sm text-slate-400">
+          Soluciones y servicios integrales de infraestructura tecnológica.
+        </p>
+      </div>
+      <span class="inline-flex items-center gap-2 px-3 py-1 text-xs font-medium rounded-full bg-slate-900 text-slate-400 border border-slate-800">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+        Sitio en construcción
+      </span>
+    </section>
   </main>
 </BaseLayout>
